@@ -77,6 +77,7 @@ const HomePage: React.FC = () => {
       <div className="container mx-auto my-10">
         <center>
           <h1 className="text-3xl font-semibold mb-5">Price Feed Aggregator</h1>
+          <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">MetaMask</button>
         </center>
         <table className="min-w-full bg-white">
           <thead>

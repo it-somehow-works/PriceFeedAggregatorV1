@@ -4,7 +4,7 @@ from cache import Cache
 
 def fetch_ethereum_price_chainlink_nodes():
     # Connect to an Ethereum node. You can use services like Infura, or use a local Ethereum node.
-    w3 = Web3(Web3.HTTPProvider('https://mainnet.infura.io/v3/TOKEN HERE'))
+    w3 = Web3(Web3.HTTPProvider("https://mainnet.infura.io/v3/0f49b992c03f4e88aaf5f2891068891a"))
 
     # Chainlink ETH/USD price feed address
     price_feed_address = '0x5f4eC3Df9cbd43714FE2740f5E3616155c5b8419'  # Update this if the address changes

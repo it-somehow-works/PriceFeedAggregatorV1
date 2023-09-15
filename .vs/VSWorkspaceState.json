@@ -1,0 +1,12 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\client",
+    "\\client\\price_feed_aggregator\\public",
+    "\\client\\price_feed_aggregator\\src",
+    "\\client\\price_feed_aggregator\\src\\app",
+    "\\client\\public",
+    "\\server"
+  ],
+  "PreviewInSolutionExplorer": false
+}
