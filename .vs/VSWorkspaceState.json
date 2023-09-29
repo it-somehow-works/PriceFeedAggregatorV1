@@ -1,13 +1,14 @@
 {
   "ExpandedNodes": [
     "",
-    "\\client",
+    "\\client\\contracts",
     "\\client\\pages",
     "\\client\\price_feed_aggregator",
-    "\\client\\price_feed_aggregator\\src\\app",
     "\\client\\public",
+    "\\client\\scripts",
+    "\\client\\test",
     "\\server"
   ],
-  "SelectedNode": "\\client\\price_feed_aggregator\\public",
+  "SelectedNode": "\\server\\updater.py",
   "PreviewInSolutionExplorer": false
 }

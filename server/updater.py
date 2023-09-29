@@ -1,10 +1,18 @@
+import os
 from web3 import Web3
 import requests
 from cache import Cache
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
+
+# Access environment variables
+api_key = os.environ['REACT_APP_INFURA_API_KEY'] 
 
 def fetch_ethereum_price_chainlink_nodes():
     # Connect to an Ethereum node. You can use services like Infura, or use a local Ethereum node.
-    w3 = Web3(Web3.HTTPProvider("https://mainnet.infura.io/v3/0f49b992c03f4e88aaf5f2891068891a"))
+    w3 = Web3(Web3.HTTPProvider("https://mainnet.infura.io/v3/{}".format(api_key)))
 
     # Chainlink ETH/USD price feed address
     price_feed_address = '0x5f4eC3Df9cbd43714FE2740f5E3616155c5b8419'  # Update this if the address changes
