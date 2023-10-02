@@ -6,6 +6,11 @@ async function main() {
     const token = await ethers.deployContract("Token");
 
     console.log("Token address:", await token.getAddress());
+
+
+    const staking = await ethers.deployContract("Staking");
+
+    console.log("Staking address:", await staking.getAddress());
 }
 
 main()
