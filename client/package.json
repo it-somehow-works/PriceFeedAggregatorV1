@@ -20,7 +20,6 @@
     "eslint": "8.48.0",
     "eslint-config-next": "13.4.19",
     "isomorphic-unfetch": "^4.0.2",
-    "next": "13.4.19",
     "postcss": "8.4.29",
     "react": "18.2.0",
     "react-dom": "18.2.0",
@@ -31,9 +30,10 @@
     "@nomiclabs/hardhat-ethers": "npm:hardhat-deploy-ethers@^0.4.1",
     "@openzeppelin/contracts": "^4.5.0",
     "dotenv": "^16.3.1",
-    "ethers": "^6.1.0",
+    "ethers": "^6.7.1",
     "hardhat": "^2.17.3",
     "hardhat-deploy": "^0.11.37",
+    "next": "^13.5.3",
     "ts-node": "^10.9.1",
     "typescript": "^5.2.2"
   }
