@@ -8,5 +8,3 @@ cache
 updater
 web3
 requests
-cache
-dotenv
