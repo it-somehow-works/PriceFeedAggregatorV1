@@ -1,8 +1,11 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
+First, run the python server from the server directory:
 
-First, run the development server:
+```python app.py```
+
+Second, run the development server from the client directory:
 
 ```bash
 npm run dev
@@ -21,6 +24,22 @@ You can start editing the page by modifying `pages/index.tsx`. The page auto-upd
 The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+
+For Smart Contract testing, this project uses [`hardhat`](https://hardhat.org/) and [`ethers`](https://docs.ethers.io/v5/). To run the tests, run the following command from the root directory:
+
+```npx hardhat test```
+
+To run hardhat in a local network, run the following command from the root directory:
+
+```npx hardhat node```
+
+To compile the contracts, run the following command from the root directory:
+
+```npx hardhat compile```
+
+To deploy the contracts, run the following command from the root directory:
+
+```npx hardhat run scripts/deploy.js --network localhost```
 
 ## Learn More
 
