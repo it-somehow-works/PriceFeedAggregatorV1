@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import fetch from 'isomorphic-unfetch';
+import Navbar from './components/Navbar'; // Import the Navbar component
 
 type CryptoData = {
     name: string;
@@ -12,6 +13,7 @@ const HomePage: React.FC = () => {
         { name: 'Binance', price: 'Fetching...' },
     ]);
     const [isConnected, setIsConnected] = useState(false);
+    const [userAddress, setUserAddress] = useState<string | null>(null);
 
     useEffect(() => {
         const fetchData = async () => {
@@ -51,24 +53,33 @@ const HomePage: React.FC = () => {
             // MetaMask is connected, you can now interact with Ethereum
             setIsConnected(true);
 
+            // Set the user's address
+            setUserAddress(accounts[0]);
+
             console.log('Connected to MetaMask');
         } catch (error) {
             console.error('MetaMask connection error:', error);
         }
     };
-
+    const disconnectFromMetaMask = async () => {
+        // Add code to disconnect from MetaMask here, if necessary
+        setIsConnected(false);
+        setUserAddress(null);
+        console.log('Disconnected from MetaMask');
+    };
     return (
         <div className="container mx-auto my-10 bg-blue-500 min-h-screen">
             <div className="container mx-auto my-10">
+                <Navbar
+                    isConnected={isConnected}
+                    userAddress={userAddress}
+                    connectToMetaMask={connectToMetaMask}
+                    disconnectFromMetaMask={disconnectFromMetaMask}
+                />
                 <center>
                     <h1 className="text-3xl font-semibold mb-5">Price Feed Aggregator</h1>
                     {!isConnected ? (
-                        <button
-                            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-                            onClick={connectToMetaMask}
-                        >
-                            Connect to MetaMask
-                        </button>
+                        <div>Please Connect to Metamask to Access Dapp</div>
                     ) : (
                         <table className="min-w-full bg-white">
                             <thead>
